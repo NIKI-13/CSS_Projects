@@ -1,0 +1,48 @@
+<html>
+<title>EARTH</title>
+<head>
+<style>
+      .planet {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  width: 400px;
+	  height: 400px;
+	  background-image: url(earth.jpg);
+	  border-radius: 50%;
+	  background-size: cover;
+	  box-shadow: -20px -20px 50px 2px black inset, 
+	  0 0 20px 2px black;
+	  animation: spin linear 30s alternate infinite;
+	
+	}
+
+@keyframes spin {
+    100%{background-position: 100%;}
+}
+
+.bg {
+  background-image: url(sp.jpg);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+body {
+  margin: 0;
+
+}
+</style>
+</head>
+<body>
+<div class="bg">
+<div class="planet"></div>
+</div>
+</body>
+</html>
+  

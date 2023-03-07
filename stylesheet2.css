@@ -1,0 +1,56 @@
+body {
+	background: url(space.jpg)
+	center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.p1 {
+	background: url(planet1.jpg);
+	width: 22em;
+	height: 22em;
+	box-shadow: inset -2em -2em 2em black,
+	-0.5em -0.5em 1em #f0d08b;
+	position: relative;
+	animation: rotate 10s linear infinite;
+}
+
+.p2 {
+	background: url(planet.jpg);
+	width: 7em;
+	height: 7em;
+	box-shadow: inset -1.5em -1.5em 1.5em black,
+	-0.2em -0.2em 0.5em #cccccc;
+	position: absolute;
+	left: -11em;
+	top: 50%;
+	transform: translateY(-50%);
+	animation: rotate 5s linear infinite,
+	orbit 20s infinite ease-in-out;
+	z-index: 1;
+}
+
+.p1, .p2 {
+	border-radius: 50%;
+	background-repeat: repeat;
+	background-size: 200% 100%;
+}
+@keyframes rotate {
+	to {background-position: -200% 0};
+}
+
+@keyframes orbit {
+	49% {z-index: 1;}
+	50% {
+		left: 25em;
+		z-index: -1;
+	}
+	99% {z-index: -1;}
+	100% {
+		left: -11em;
+		z-index: 1;
+	}
+}
